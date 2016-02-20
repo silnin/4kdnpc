@@ -1,0 +1,25 @@
+{
+  "name": "4kdnpc",
+  "version": "1.0.0",
+  "description": "NPC generator for my \"4 Kingdoms\" campaign",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silnin/4kdnpc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/silnin/4kdnpc/issues"
+  },
+  "homepage": "https://github.com/silnin/4kdnpc#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "mysql": "^2.10.2",
+    "sequelize": "^3.19.3"
+  }
+}
