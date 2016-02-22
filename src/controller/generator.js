@@ -69,10 +69,10 @@ router.get('/', function(req, res) {
         message += '<tr><td><b>Height</b></td><td>' + npc.height + '</td></tr>';
         message += '<tr><td><b>Build</b></td><td>' + npc.build + '</td></tr>';
 
-        if (npc.hairstyle != 'Bald') {
+        if (npc.hairlength != 'Bald') {
             message += '<tr><td><b>Hair</b></td><td>' + npc.haircolor + ', ' + npc.hairlength + ', ' + npc.hairstyle + '</td></tr>';
         } else {
-            message += '<tr><td><b>Hair</b></td><td>' + npc.hairstyle + '</td></tr>';
+            message += '<tr><td><b>Hair</b></td><td>' + npc.hairlength + '</td></tr>';
         }
 
         message += '<tr><td><b>Eyes</b></td><td>' + npc.eyes + '</td></tr>';
