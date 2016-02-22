@@ -8,7 +8,7 @@ var sex = sequelize.define('sex', {
         classMethods: {
             getRandom: function(npc) {
 
-                sequelize.query("SELECT type FROM 4kdnpc.sex ORDER BY RAND() LIMIT 1", { type: sequelize.QueryTypes.SELECT})
+                sequelize.query("SELECT type FROM 4kdnpc.sexes ORDER BY RAND() LIMIT 1", { type: sequelize.QueryTypes.SELECT})
                     .then(function(results) {
                         npc.sex = results[0].type;
                     })
