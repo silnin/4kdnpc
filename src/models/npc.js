@@ -1,4 +1,8 @@
-var Npc = sequelize.define('npc', {
+var Sequelize = require('../seq').Sequelize;
+var sequelize = require('../seq').sequelize;
+var fs = require('fs');
+
+var npc = sequelize.define('npc', {
     name: {
         type: Sequelize.STRING,
         field: 'name'
@@ -15,9 +19,9 @@ var Npc = sequelize.define('npc', {
         type: Sequelize.STRING,
         field: 'profession'
     },
-    aspect_trouble: {
+    trouble: {
         type: Sequelize.STRING,
-        field: 'aspect_trouble'
+        field: 'trouble'
     },
     voice: {
         type: Sequelize.STRING,
@@ -27,32 +31,56 @@ var Npc = sequelize.define('npc', {
         type: Sequelize.STRING,
         field: 'state'
     },
-    motivation: {
+    trait: {
         type: Sequelize.STRING,
-        field: 'motivation'
+        field: 'trait'
     },
-    personality: {
+    skin: {
         type: Sequelize.STRING,
-        field: 'personality'
+        field: 'skin'
     },
-    appearance: {
+    haircolor: {
         type: Sequelize.STRING,
-        field: 'appearance'
+        field: 'haircolor'
     },
-    skills: {
+    hairstyle: {
         type: Sequelize.STRING,
-        field: 'skills'
+        field: 'hairstyle'
     },
-
-
+    hairlength: {
+        type: Sequelize.STRING,
+        field: 'hairlength'
+    },
+    eyes: {
+        type: Sequelize.STRING,
+        field: 'eyes'
+    },
+    height: {
+        type: Sequelize.STRING,
+        field: 'height'
+    },
+    build: {
+        type: Sequelize.STRING,
+        field: 'build'
+    },
+    skill1: {
+        type: Sequelize.STRING,
+        field: 'skill1'
+    },
+    skill2: {
+        type: Sequelize.STRING,
+        field: 'skill2'
+    },
+    skill3: {
+        type: Sequelize.STRING,
+        field: 'skill3'
+    },
+    skill4: {
+        type: Sequelize.STRING,
+        field: 'skill4'
+    }
 }, {
     freezeTableName: true // Model tableName will be the same as the model name
 });
 
-//User.sync({force: true}).then(function () {
-//    // Table created
-//    return User.create({
-//        firstName: 'John',
-//        lastName: 'Hancock'
-//    });
-//});
+exports.npc = npc;
